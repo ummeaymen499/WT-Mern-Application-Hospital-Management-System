@@ -1,0 +1,48 @@
+# Healthcare Appointment System - Backend
+
+## API Endpoints
+
+### Authentication
+- POST /api/auth/register - Register new user
+- POST /api/auth/login - Login user
+- GET /api/auth/me - Get current user
+- PUT /api/auth/updatedetails - Update user details
+- PUT /api/auth/updatepassword - Update password
+
+### Users (Admin only)
+- GET /api/users - Get all users
+- GET /api/users/:id - Get single user
+- POST /api/users - Create user
+- PUT /api/users/:id - Update user
+- DELETE /api/users/:id - Delete user
+
+### Departments
+- GET /api/departments - Get all departments
+- GET /api/departments/:id - Get single department
+- POST /api/departments - Create department (Admin)
+- PUT /api/departments/:id - Update department (Admin)
+- DELETE /api/departments/:id - Delete department (Admin)
+
+### Doctors
+- GET /api/doctors - Get all doctors
+- GET /api/doctors/:id - Get single doctor
+- GET /api/doctors/department/:departmentId - Get doctors by department
+- POST /api/doctors - Create doctor (Admin)
+- PUT /api/doctors/:id - Update doctor
+- DELETE /api/doctors/:id - Delete doctor (Admin)
+
+### Appointments
+- GET /api/appointments - Get appointments
+- GET /api/appointments/:id - Get single appointment
+- POST /api/appointments - Create appointment (Patient)
+- PUT /api/appointments/:id - Update appointment
+- PUT /api/appointments/:id/status - Update status (Doctor/Admin)
+- PUT /api/appointments/:id/cancel - Cancel appointment
+- GET /api/appointments/available-slots/:doctorId/:date - Get available slots
+- GET /api/appointments/stats - Get statistics (Admin)
+
+### Reviews
+- GET /api/reviews/doctor/:doctorId - Get doctor reviews
+- POST /api/reviews - Create review (Patient)
+- PUT /api/reviews/:id - Update review
+- DELETE /api/reviews/:id - Delete review

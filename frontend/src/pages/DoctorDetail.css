@@ -1,0 +1,280 @@
+.doctor-detail-page {
+  padding: 40px 0;
+}
+
+.doctor-header {
+  margin-bottom: 24px;
+}
+
+.doctor-header-content {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  align-items: flex-start;
+}
+
+.doctor-avatar-large {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.doctor-header-info {
+  flex: 1;
+}
+
+.doctor-header-info h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.doctor-header-info .specialization {
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.doctor-header-info .department {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.doctor-badges {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.doctor-badges .badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+}
+
+.doctor-header-actions {
+  text-align: right;
+}
+
+.consultation-fee {
+  margin-bottom: 16px;
+}
+
+.fee-label {
+  display: block;
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.fee-amount {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Tabs */
+.doctor-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0;
+}
+
+.tab-btn {
+  padding: 12px 24px;
+  border: none;
+  background: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  color: var(--primary-color);
+}
+
+.tab-btn.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+/* Tab Content */
+.overview-tab,
+.schedule-tab,
+.reviews-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-card .card-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.info-card .card-body p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-secondary);
+}
+
+.contact-item svg {
+  color: var(--primary-color);
+}
+
+/* Schedule */
+.available-days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.day-badge {
+  padding: 8px 16px;
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+}
+
+.day-badge.active {
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.time-slot {
+  padding: 10px 16px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+}
+
+/* Reviews */
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.review-card {
+  padding: 20px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reviewer-avatar {
+  width: 44px;
+  height: 44px;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.reviewer-name {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.review-date {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.review-rating {
+  display: flex;
+  gap: 4px;
+}
+
+.review-rating .star {
+  color: var(--border-color);
+  font-size: 16px;
+}
+
+.review-rating .star.filled {
+  color: #f59e0b;
+  fill: #f59e0b;
+}
+
+.review-comment {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .doctor-header-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .doctor-badges {
+    justify-content: center;
+  }
+
+  .doctor-header-actions {
+    text-align: center;
+    width: 100%;
+  }
+
+  .tab-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .review-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
